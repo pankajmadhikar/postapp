@@ -1,38 +1,200 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.body {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 100px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.generator {
   display: flex;
   flex-direction: column;
+  width: 70%;
+  margin: 0 auto;
+}
+.generator textarea {
+  outline: none;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  padding: 5px;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+.generator input {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  outline: none;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  padding: 5px;
+  padding-left: 10px;
+  border-radius: 10px;
+}
+.main-edit-btn {
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background-color: rgb(5, 177, 42);
+  padding: 7px;
+  color: #fff;
+  font-size: 20px;
+}
+.todo-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.product-content {
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  min-height: 300px;
+  width: 200px;
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  justify-content: space-between;
+}
+.cart-btns {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+.cart-btns i {
+  padding: 10px;
+  border-radius: 25px;
+}
+.cart-btns i:hover {
+  background-color: #dfd9d9;
+  padding: 10px;
+  cursor: pointer;
+}
+.cmt-creator {
+  width: 100%;
+  display: flex;
+}
+.cmt-creator input {
+  width: 80%;
+  outline: none;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  padding-left: 5px;
+}
+.cmt-creator .add-cmt-btn {
+  width: 18%;
+  background-color: green;
+  color: #fff;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 5px;
+  cursor: pointer;
+}
+.comment-box {
+  height: 50%;
+}
+.post-btn {
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background-color: rgb(101, 101, 252);
+  padding: 7px;
+  color: #fff;
+  font-size: 20px;
+}
+.check-list {
+  background-color: rgb(138, 7, 7);
+  border-radius: 10px;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  outline: none;
+  margin-left: 20px;
+  margin-bottom: 50px;
+}
+.edit-btn:hover {
+  color: rgb(3, 202, 3);
+}
+.delete-btn:hover {
+  color: red;
+}
+.fa-comments:hover {
+  color: rgb(52, 52, 243);
 }
 
-.App-link {
-  color: #61dafb;
+/* ##################################################################################### */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  opacity: 999;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo-img {
+  height: 50px;
+  width: 200px;
+  margin-right: 15px;
+}
+.talk-btn {
+  background-color: rgb(101, 101, 252);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 16px;
+}
+.nav-link {
+  font-size: 15px;
+  font-weight: normal;
+  margin-right: 20px;
+}
+.nav-link:hover {
+  background-color: rgba(192, 192, 252, 0.288);
+}
+
+/* ########################### Chat Bot Style */
+.chat-with-us-parent {
+  position: fixed;
+  bottom: 30px;
+  right: 50px;
+  background-color: #0f3460;
+  border-radius: 5px;
+}
+.chat-with-us-parent button {
+  width: 170px;
+  height: 50px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background: #0f3460;
+  color: #ffff;
+  font-weight: 400;
+  cursor: pointer;
+  font-size: 1.1em;
+}
+.chat-bot-dilog-parent {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
